@@ -1,0 +1,257 @@
+{
+  "baseUrl": "https://gregcastellanos.com",
+  "name": "Gregory Castellanos",
+  "contactEmail": "gregcastellanoswork@gmail.com",
+  "description": "The umbrella site for Gregory Castellanos, a Northern California founder, learning designer, executive function coach, AI evaluation specialist, event producer, and inventor.",
+  "nav": [
+    [
+      "Home",
+      "index.html"
+    ],
+    [
+      "People",
+      "people.html"
+    ],
+    [
+      "Ideas",
+      "ideas.html"
+    ],
+    [
+      "Brands",
+      "brands.html"
+    ],
+    [
+      "Technology",
+      "technology.html"
+    ],
+    [
+      "Experiences",
+      "experiences.html"
+    ],
+    [
+      "Places",
+      "places.html"
+    ],
+    [
+      "Work",
+      "work.html"
+    ],
+    [
+      "About",
+      "about.html"
+    ],
+    [
+      "Contact",
+      "contact.html"
+    ]
+  ],
+  "areas": [
+    {
+      "slug": "people",
+      "name": "People",
+      "venture": "Castellanos Coaching",
+      "url": "https://castellanoscoaching.com",
+      "purpose": "Coaching and learning systems that help people build practical independence.",
+      "intro": "Executive function coaching, neurodiversity support, family collaboration, transition planning, academic support, and practical life systems.",
+      "cue": "Clarity in motion",
+      "color": "#315d82"
+    },
+    {
+      "slug": "ideas",
+      "name": "Ideas",
+      "venture": "Castellanos Consulting",
+      "purpose": "Turning complex ideas into clear plans, programs, and operating systems.",
+      "intro": "Strategy, program design, founder operations, community programs, partnerships, conservation concepts, and fundable project logic.",
+      "cue": "The real opportunity",
+      "color": "#7b8f6f"
+    },
+    {
+      "slug": "brands",
+      "name": "Brands",
+      "venture": "Castellanos Creative",
+      "purpose": "Making meaningful work easier to understand, explain, and trust.",
+      "intro": "Positioning, naming, messaging, websites, pitch materials, presentations, content systems, and launch direction.",
+      "cue": "Meaning made visible",
+      "color": "#a57933"
+    },
+    {
+      "slug": "technology",
+      "name": "Technology",
+      "venture": "AI You Trust",
+      "purpose": "Human-centered AI, evaluation, learning tools, and creative technology.",
+      "intro": "AI evaluation, AI literacy, prompt and output review, educational tools, digital systems, web tools, AV workflows, and responsible adoption.",
+      "cue": "Tools people can trust",
+      "color": "#233f63"
+    },
+    {
+      "slug": "experiences",
+      "name": "Experiences",
+      "venture": "Recreation Experiences",
+      "purpose": "Events and gatherings shaped with sound, flow, hospitality, and calm production.",
+      "intro": "Corporate production, community events, retreats, fundraisers, radio, DJing, AV, stage management, and technical direction.",
+      "cue": "Gatherings with intention",
+      "color": "#825c43"
+    },
+    {
+      "slug": "places",
+      "name": "Places",
+      "venture": "Castellanos Makes Places Better",
+      "purpose": "Improving places so they feel more useful, welcoming, ready, and alive.",
+      "intro": "Place strategy, beautification, stewardship, guest readiness, hospitality systems, retreat environments, and practical activation.",
+      "cue": "Potential made practical",
+      "color": "#536f58"
+    }
+  ],
+  "compass": [
+    "Clarity",
+    "Alignment",
+    "Foundation",
+    "Expansion"
+  ],
+  "work": [
+    {
+      "name": "Castellanos Coaching",
+      "areas": [
+        "People",
+        "Ideas",
+        "Technology"
+      ],
+      "overview": "A dedicated coaching practice for executive function, independence, family support, transition planning, and practical capability.",
+      "situation": "People and families often need a clearer way to organize growth without reducing a person to a problem.",
+      "role": "Founder, coach, educator, framework creator",
+      "contribution": "Created the Castellanos Compass, connected education and coaching practice, shaped service language, and built a dedicated coaching destination.",
+      "status": "Dedicated site active at castellanoscoaching.com.",
+      "privacy": "Public venture",
+      "link": "https://castellanoscoaching.com"
+    },
+    {
+      "name": "Local Maker Mart",
+      "areas": [
+        "People",
+        "Ideas",
+        "Brands",
+        "Technology",
+        "Experiences",
+        "Places"
+      ],
+      "overview": "A nonprofit community arts center and maker hub in North Beach, San Francisco.",
+      "situation": "Creative local projects need systems that make participation, commerce, learning, and community feel connected.",
+      "role": "Founder and organizer",
+      "contribution": "Led facility acquisition, nonprofit setup, grants, partnerships, programming, volunteers, and maker education.",
+      "status": "Legacy venture and reference point for current community-building work.",
+      "privacy": "Public concept"
+    },
+    {
+      "name": "Recreation Sound Systems",
+      "areas": [
+        "Brands",
+        "Technology",
+        "Experiences"
+      ],
+      "overview": "Patented sustainable audio technology and a production practice rooted in sound, design, and live operations.",
+      "situation": "Events need more than gear. They need calm, preparation, good taste, and technical systems that support the human experience.",
+      "role": "Founder, producer, technical director",
+      "contribution": "Developed resonance-based speaker technology, earned two U.S. patents, and connected product design with event production.",
+      "status": "Legacy venture informing Recreation Experiences.",
+      "privacy": "Public venture"
+    },
+    {
+      "name": "Recreation Experiences",
+      "areas": [
+        "Ideas",
+        "Brands",
+        "Experiences",
+        "Places"
+      ],
+      "overview": "A broader experience platform for events, retreats, fundraisers, workshops, and community gatherings.",
+      "situation": "People are hungry for gatherings that feel alive, well held, and intentionally designed.",
+      "role": "Creative strategist, host, producer, curator",
+      "contribution": "Shapes concept, production, hospitality, sound, run-of-show, crew, and stakeholder coordination.",
+      "status": "Active platform and evolving body of work.",
+      "privacy": "Public venture with private project details withheld"
+    },
+    {
+      "name": "AI You Trust",
+      "areas": [
+        "People",
+        "Ideas",
+        "Technology"
+      ],
+      "overview": "A human-centered AI direction focused on evaluation, literacy, and tools people can use with judgment.",
+      "situation": "AI can help people learn and create, but it can also make people feel overwhelmed or dependent.",
+      "role": "Concept lead, educator, strategist",
+      "contribution": "Connects learning design, prompt evaluation, output review, harm awareness, and practical AI adoption.",
+      "status": "Active concept and development direction.",
+      "privacy": "Public concept"
+    },
+    {
+      "name": "Stay In The Light",
+      "areas": [
+        "Ideas",
+        "Brands",
+        "Experiences",
+        "Places"
+      ],
+      "overview": "A retreat and gathering concept shaped around presence, hospitality, and place-based experience.",
+      "situation": "A meaningful retreat needs a clear point of view, a trusted container, and careful attention to setting.",
+      "role": "Concept developer, creative director, producer",
+      "contribution": "Connected idea, language, environment, flow, hospitality, and production planning into a coherent concept.",
+      "status": "Concept and project material, with private location details protected.",
+      "privacy": "Private details withheld"
+    },
+    {
+      "name": "Bodega Bay Hospitality Work",
+      "areas": [
+        "Ideas",
+        "Experiences",
+        "Places"
+      ],
+      "overview": "Hospitality and property-readiness work connected to guest experience, organization, and practical improvement.",
+      "situation": "A property can have real potential but still need stronger systems, clearer presentation, and better guest readiness.",
+      "role": "Steward, organizer, strategist, hands-on problem solver",
+      "contribution": "Supported practical improvements, spatial organization, guest-readiness thinking, and experience-led property care.",
+      "status": "Selected private work described without owner or address details.",
+      "privacy": "Private owner and location details withheld"
+    },
+    {
+      "name": "Selectas Flow",
+      "areas": [
+        "People",
+        "Experiences",
+        "Technology"
+      ],
+      "overview": "A radio and music platform connected to listening, curation, rhythm, community, and the culture of gathering.",
+      "situation": "Music can create a shared field of attention and belonging when it is selected with care.",
+      "role": "Host, DJ, curator",
+      "contribution": "Brings music, story, community connection, and production experience together through a public radio context.",
+      "status": "Hosted on KGGV 95.1 FM.",
+      "privacy": "Public creative work"
+    }
+  ],
+  "current": [
+    "AI evaluation, AI literacy, and human-centered tool design.",
+    "Executive function coaching and practical independence systems.",
+    "Events, learning programs, and Castellanos Makes Places Better projects that bring people together well."
+  ],
+  "timeline": [
+    "B.A. Interactive Multimedia",
+    "Master of Arts in Teaching",
+    "STEAM curriculum and maker education",
+    "Two U.S. patents for resonance-based audio technology",
+    "Recreation Sound and live event production",
+    "Local Maker Mart nonprofit community arts center",
+    "Castellanos Coaching and executive function systems",
+    "AI evaluation, AI literacy, and tool development",
+    "Recreation Experiences and Castellanos Makes Places Better"
+  ],
+  "speakingTopics": [
+    "Executive function and independence",
+    "Neurodivergence and practical support",
+    "Human-centered AI and AI literacy",
+    "Education, project-based learning, and creative technology",
+    "Entrepreneurship and community building",
+    "Multidisciplinary careers",
+    "Events, hospitality, and experience design",
+    "Turning ambitious ideas into actionable projects"
+  ]
+}

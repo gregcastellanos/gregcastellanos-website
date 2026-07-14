@@ -1,0 +1,62 @@
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".site-nav");
+if (toggle && nav) {
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+}
+
+window.gregAnalytics = {
+  track(name, detail = {}) {
+    window.dispatchEvent(new CustomEvent("greg:analytics", { detail: { name, ...detail } }));
+  }
+};
+
+document.querySelectorAll(".filter").forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+    document.querySelectorAll(".filter").forEach((item) => item.classList.toggle("is-active", item === button));
+    document.querySelectorAll(".work-item").forEach((item) => {
+      const visible = filter === "all" || item.dataset.areas?.split(" ").includes(filter);
+      item.hidden = !visible;
+    });
+    window.gregAnalytics.track("work_filter", { filter });
+  });
+});
+
+const startedAt = document.querySelector("#startedAt");
+if (startedAt) startedAt.value = String(Date.now());
+
+const form = document.querySelector("#contact-form");
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const note = document.querySelector("#form-note");
+    const elapsed = Date.now() - Number(data.get("startedAt") || 0);
+    if (data.get("website") || elapsed < 2500) {
+      note.textContent = "Thanks. Please try again in a moment.";
+      return;
+    }
+    const required = ["name", "email", "area", "message"];
+    const missing = required.filter((key) => !String(data.get(key) || "").trim());
+    if (missing.length) {
+      note.textContent = "Please complete the required fields before preparing the inquiry.";
+      return;
+    }
+    const subject = encodeURIComponent("Gregory Castellanos inquiry: " + data.get("area"));
+    const body = encodeURIComponent([
+      "Name: " + data.get("name"),
+      "Email: " + data.get("email"),
+      "Organization: " + (data.get("organization") || ""),
+      "Area: " + data.get("area"),
+      "Timing: " + (data.get("timing") || ""),
+      "Referral: " + (data.get("referral") || ""),
+      "",
+      String(data.get("message") || "")
+    ].join("\n"));
+    note.innerHTML = 'Your inquiry is ready: <a href="mailto:gregcastellanoswork@gmail.com?subject=' + subject + '&body=' + body + '">open email draft</a>.';
+    window.gregAnalytics.track("contact_prepare", { area: data.get("area") });
+  });
+}
