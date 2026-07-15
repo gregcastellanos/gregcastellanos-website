@@ -95,9 +95,9 @@
     {
       "slug": "places",
       "name": "Places",
-      "venture": "Castellanos Makes Places Better",
-      "purpose": "Improving places so they feel more useful, welcoming, ready, and alive.",
-      "intro": "Place strategy, beautification, stewardship, guest readiness, hospitality systems, retreat environments, and practical activation.",
+      "venture": "Common Ground Works",
+      "purpose": "Helping overlooked places become more useful, welcoming, and alive.",
+      "intro": "Place strategy, beautification, stewardship, guest readiness, hospitality thinking, creative reuse, and practical activation.",
       "cue": "Potential made practical",
       "color": "#536f58"
     }
@@ -214,6 +214,20 @@
       "privacy": "Private owner and location details withheld"
     },
     {
+      "name": "Common Ground Works",
+      "areas": [
+        "Ideas",
+        "Experiences",
+        "Places"
+      ],
+      "overview": "A place-based practice for stewardship, guest readiness, hospitality thinking, creative reuse, and practical activation.",
+      "situation": "Some properties and gathering places have real potential but need clearer purpose, readiness, care, and presentation.",
+      "role": "Place strategist, steward, organizer",
+      "contribution": "Connects practical improvement, hospitality, visual judgment, maintenance thinking, and experience design.",
+      "status": "Active place-based direction with private location details withheld.",
+      "privacy": "Private details protected"
+    },
+    {
       "name": "Selectas Flow",
       "areas": [
         "People",
@@ -231,7 +245,7 @@
   "current": [
     "AI evaluation, AI literacy, and human-centered tool design.",
     "Executive function coaching and practical independence systems.",
-    "Events, learning programs, and Castellanos Makes Places Better projects that bring people together well."
+    "Events, learning programs, and Common Ground Works projects that help places come alive."
   ],
   "timeline": [
     "B.A. Interactive Multimedia",
@@ -242,7 +256,7 @@
     "Local Maker Mart nonprofit community arts center",
     "Castellanos Coaching and executive function systems",
     "AI evaluation, AI literacy, and tool development",
-    "Recreation Experiences and Castellanos Makes Places Better"
+    "Recreation Experiences and Common Ground Works"
   ],
   "speakingTopics": [
     "Executive function and independence",

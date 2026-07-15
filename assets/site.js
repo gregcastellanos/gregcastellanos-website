@@ -1,9 +1,23 @@
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
 if (toggle && nav) {
+  const closeNav = () => {
+    nav.classList.remove("is-open");
+    document.body.classList.remove("nav-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open navigation");
+  };
   toggle.addEventListener("click", () => {
     const open = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    document.body.classList.toggle("nav-open", open);
+  });
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeNav);
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeNav();
   });
 }
 
