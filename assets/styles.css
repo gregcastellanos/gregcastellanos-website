@@ -358,6 +358,20 @@ p { margin: 0; }
   font-weight: 750;
 }
 .work-band .button { margin-top: 2rem; }
+.compact-list { gap: clamp(.85rem, 1.6vw, 1.25rem); }
+.compact-list .work-item {
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, .32fr);
+  gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: start;
+}
+.compact-list .work-item aside {
+  align-self: start;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .92rem;
+  font-weight: 650;
+}
 .portrait-section {
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
@@ -457,7 +471,7 @@ input, select, textarea {
 }
 textarea { resize: vertical; }
 .honeypot { position: absolute; left: -100vw; }
-.form-note { color: var(--gray); font-size: .95rem; }
+.form-note { color: var(--muted); font-size: .95rem; }
 .contact-aside {
   border-left: 1px solid var(--line);
   padding-left: 1.5rem;
@@ -533,6 +547,7 @@ textarea { resize: vertical; }
   .contact-invite.compact h2 { font-size: 2.35rem; }
   .area-rail, .ecosystem-grid, .focus-list, .topic-grid, .footer-grid, .format-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .work-item { grid-template-columns: 3rem minmax(0, 1fr); }
+  .compact-list .work-item { grid-template-columns: 1fr; gap: 1rem; }
   .work-item aside, .contact-aside { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 1rem; }
   .contact-invite.compact { display: block; }
   .contact-invite.compact .button { margin-top: 1.25rem; }
