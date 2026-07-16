@@ -2,7 +2,7 @@
 
 ## Current Direction
 
-The site is now a simpler personal umbrella site for Greg Castellanos. It introduces Greg, explains six connected areas of work, links to venture destinations where available, shows selected proof, and gives visitors a straightforward way to start a conversation.
+The site is now a simpler personal umbrella site for Gregory Castellanos. It introduces Greg, explains six connected areas of work, links to venture destinations where available, shows selected proof, and gives visitors a straightforward way to start a conversation.
 
 ## What Was Adjusted
 

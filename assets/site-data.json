@@ -63,8 +63,8 @@
       "slug": "experiences",
       "name": "Experiences",
       "venture": "Recreation Experiences",
-      "purpose": "Events, retreats, sound, production, radio, and community gatherings shaped with intention.",
-      "intro": "Events, retreats, sound, production, radio, and community gatherings shaped with intention.",
+      "purpose": "Events, retreats, sound, production, and community gatherings shaped with intention.",
+      "intro": "Events, retreats, sound, production, and community gatherings shaped with intention.",
       "cue": "Gatherings with intention",
       "color": "#825c43"
     },
@@ -131,20 +131,6 @@
       "contribution": "Connected idea, language, environment, flow, hospitality, and production planning into a coherent concept.",
       "status": "Concept and project material, with private location details protected.",
       "privacy": "Private details withheld"
-    },
-    {
-      "name": "Selectas Flow",
-      "areas": [
-        "People",
-        "Experiences",
-        "Technology"
-      ],
-      "overview": "A radio and music platform connected to listening, curation, rhythm, community, and the culture of gathering.",
-      "situation": "Music can create a shared field of attention and belonging when it is selected with care.",
-      "role": "Host, DJ, curator",
-      "contribution": "Brings music, story, community connection, and production experience together through a public radio context.",
-      "status": "Hosted on KGGV 95.1 FM.",
-      "privacy": "Public creative work"
     },
     {
       "name": "Kolob Gate Gardens",
