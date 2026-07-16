@@ -232,6 +232,8 @@ AREAS = [
     {
         "slug": "experiences", "name": "Experiences", "venture": "Recreation Experiences",
         "color": "#855c43", "url": "",
+        "hero_image": "greg-production.jpg",
+        "hero_alt": "Greg Castellanos running graphics and playback from the production desk at a live gala.",
         "cue": "Gatherings with intention",
         "purpose": "Events shaped with sound, hospitality, and calm production.",
         "detail": "100+ events over a decade; Executive Producer of the sold-out 250-person Convergence 2026; supported productions for Google, Stripe, Nasdaq, and the World Economic Forum through leading Bay Area production companies.",
@@ -706,7 +708,7 @@ def build_home():
       <div class="container">
         <div class="feature-split reveal">
           <figure class="hero-figure portrait" style="margin:0;border-radius:0">
-            <img src="assets/images/gregory-headshot.png" alt="Portrait of Gregory Castellanos." width="514" height="498" loading="lazy" decoding="async">
+            <img src="assets/images/greg-production.jpg" alt="Greg Castellanos running graphics and playback from the production desk at a live gala." width="1200" height="1600" style="object-position:62% 55%" loading="lazy" decoding="async">
           </figure>
           <div class="copy">
             <p class="eyebrow">About Greg</p>
@@ -739,19 +741,29 @@ def build_area(a):
     related = "".join(
         case_card(CASE_BY_NAME[n], filterable=False) for n in a["related"] if n in CASE_BY_NAME)
     cta_primary = f'<a class="button primary" href="{a["cta_href"]}">{a["cta"]}</a>'
+    hero_img = a.get("hero_image")
+    if hero_img:
+        hero_class = "hero page-hero"
+        hero_fig = (f'<figure class="hero-figure reveal"><img src="assets/images/{hero_img}" '
+                    f'alt="{a.get("hero_alt", "")}" width="1200" height="1600" '
+                    f'style="aspect-ratio:3/4" loading="eager" decoding="async"></figure>')
+    else:
+        hero_class = "hero page-hero text-hero"
+        hero_fig = ""
 
     extra = [{
         "@type": "Service", "serviceType": a["name"], "name": a["venture"],
         "provider": {"@id": BASE_URL + "/#greg"}, "areaServed": "United States",
         "description": a["purpose"],
     }]
-    body = f"""    <section class="hero page-hero text-hero" style="--area:{a['color']}">
+    body = f"""    <section class="{hero_class}" style="--area:{a['color']}">
       <div class="hero-copy reveal">
         <p class="eyebrow">{a['name']} · {a['venture']}</p>
         <h1>{a['hero_h1']}</h1>
         <p class="lede">{a['hero_lede']}</p>
         <div class="cta-row">{cta_primary}<a class="button secondary" href="work.html">See related work</a></div>
       </div>
+      {hero_fig}
     </section>
     <section class="section tight">
       <div class="container">
@@ -840,7 +852,7 @@ def build_about():
         <div class="chip-list" style="margin-top:1.75rem">{domains}</div>
       </div>
       <figure class="hero-figure portrait reveal">
-        <img src="assets/images/gregory-headshot.png" alt="Portrait of Gregory Castellanos." width="514" height="498" loading="eager" decoding="async" fetchpriority="high">
+        <img src="assets/images/greg-headshot.jpg" alt="Portrait of Gregory Castellanos." width="514" height="738" loading="eager" decoding="async" fetchpriority="high">
         <figcaption>Greg Castellanos · Bay Area / Sonoma County, CA</figcaption>
       </figure>
     </section>
@@ -866,6 +878,20 @@ def build_about():
             <p class="eyebrow">Education &amp; credentials</p>
             <ul class="rule-list">{cred}</ul>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="section tight">
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <p class="eyebrow">Beyond the work</p>
+            <h2>Bay Area born, happiest with a project and a mountain nearby.</h2>
+            <p style="color:var(--muted);margin-top:1rem">Greg lives and works between the Bay Area and Sonoma County. Snowboarding, radio, music, and time outdoors keep the ideas moving as much as the work does — and keep the practice grounded in real life.</p>
+          </div>
+          <figure class="hero-figure reveal" style="margin:0">
+            <img src="assets/images/greg-outdoors.jpg" alt="Greg Castellanos in the snow-covered Sierra." width="1200" height="1600" style="aspect-ratio:3/4" loading="lazy" decoding="async">
+          </figure>
         </div>
       </div>
     </section>

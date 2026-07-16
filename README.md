@@ -32,17 +32,18 @@ footer, meta tags, structured data, and shared components stay consistent.
 Editing the generated `.html` directly works too, but changes will be
 overwritten the next time `build.py` runs — prefer editing `build.py`.
 
-## Things to fill in when you have them
+## Optional future additions
 
-A few slots are intentionally left for real assets (nothing is invented):
+The core content is in place (LinkedIn, patents with USPTO links, real client
+testimonials, and real photos of Greg). Nice-to-haves when available:
 
-- **LinkedIn URL** — set `LINKEDIN_URL` in `build.py` to wire it into the footer
-  and structured data.
-- **Patent numbers** — the two U.S. patents are referenced by name; add numbers
-  and USPTO links when documented.
-- **Testimonials** — the About page has reserved slots; drop in real quotes
-  (with permission) in `build.py`.
-- **Real photos** — event, teaching, and project photos will strengthen the
-  work and area pages.
+- **More photos** — teaching/classroom, coaching context, and real place/property
+  photos would let People, Technology, and Places carry images too. Drop web-ready
+  files in `assets/images/` and reference them in `build.py`.
+- **Additional testimonials** — production leads or education partners, added to
+  `TESTIMONIALS` in `build.py` (only with permission).
+
+Photos are processed with Pillow — auto-oriented, resized, and compressed. See the
+one-off script pattern used in the project history if adding more.
 
 See `DESIGN_AUDIT.md` for design notes.
