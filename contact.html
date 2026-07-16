@@ -11,12 +11,26 @@
   <meta property="og:description" content="Contact Gregory Castellanos about coaching, consulting, brand, technology, experiences, places, speaking, teaching, and collaboration.">
   <meta property="og:url" content="https://gregcastellanos.com/contact.html">
   <meta property="og:image" content="https://gregcastellanos.com/assets/images/gregory-castellanos-logo-light.png">
+  <meta property="og:image:width" content="1640">
+  <meta property="og:image:height" content="650">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://gregcastellanos.com/assets/images/gregory-castellanos-logo-light.png">
   <meta name="theme-color" content="#10243a">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://gregcastellanos.com/#greg-castellanos","name":"Gregory Castellanos","url":"https://gregcastellanos.com","jobTitle":["Creative strategist","Educator","Coach","Designer","Technologist","Producer","Entrepreneur"],"address":{"@type":"PostalAddress","addressRegion":"California","addressCountry":"US"},"knowsAbout":["People","Ideas","Brands","Technology","Experiences","Places"]},{"@type":"WebSite","@id":"https://gregcastellanos.com/#website","name":"Gregory Castellanos","url":"https://gregcastellanos.com","description":"The umbrella site for Gregory Castellanos, a Northern California founder, learning designer, executive function coach, AI evaluation specialist, event producer, and inventor."},{"@type":"WebPage","@id":"https://gregcastellanos.com/contact.html#webpage","url":"https://gregcastellanos.com/contact.html","name":"Contact | Gregory Castellanos","description":"Contact Gregory Castellanos about coaching, consulting, brand, technology, experiences, places, speaking, teaching, and collaboration.","isPartOf":{"@id":"https://gregcastellanos.com/#website"},"about":{"@id":"https://gregcastellanos.com/#greg-castellanos"}}]}</script>
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem("greg-theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = stored || (systemDark ? "dark" : "light");
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://gregcastellanos.com/#greg-castellanos","name":"Gregory Castellanos","url":"https://gregcastellanos.com","jobTitle":["Creative strategist","Educator","Coach","Designer","Technologist","Producer","Entrepreneur"],"address":{"@type":"PostalAddress","addressRegion":"California","addressCountry":"US"},"knowsAbout":["People","Ideas","Brands","Technology","Experiences","Places"]},{"@type":"WebSite","@id":"https://gregcastellanos.com/#website","name":"Gregory Castellanos","url":"https://gregcastellanos.com","description":"The umbrella site for Gregory Castellanos, a Northern California founder, learning designer, executive function coach, AI evaluation specialist, event producer, and inventor."},{"@type":"ContactPage","@id":"https://gregcastellanos.com/contact.html#webpage","url":"https://gregcastellanos.com/contact.html","name":"Contact | Gregory Castellanos","description":"Contact Gregory Castellanos about coaching, consulting, brand, technology, experiences, places, speaking, teaching, and collaboration.","isPartOf":{"@id":"https://gregcastellanos.com/#website"},"about":{"@id":"https://gregcastellanos.com/#greg-castellanos"}}]}</script>
 </head>
 <body class="">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -27,15 +41,16 @@
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">Menu</button>
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="index.html" >Home</a><a href="people.html" >People</a><a href="ideas.html" >Ideas</a><a href="brands.html" >Brands</a><a href="technology.html" >Technology</a><a href="experiences.html" >Experiences</a><a href="places.html" >Places</a><a href="work.html" >Work</a><a href="about.html" >About</a><a href="contact.html" aria-current="page">Contact</a>
+      <a href="index.html" >Home</a><a href="ventures.html" >Ventures</a><a href="about.html" >About</a><a href="contact.html" aria-current="page">Contact</a>
     </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">Theme</button>
   </header>
   <main id="main">
     <section class="page-hero contact-hero text-hero">
     <div>
       <p class="eyebrow">Contact</p>
-      <h1>Tell Greg what you are building, changing, or trying to solve.</h1>
-      <p class="lede">Start with a simple note. Coaching, strategy, brand, technology, events, teaching, place work, and unusual collaborations are all welcome.</p>
+      <h1>Tell me what you’re building, changing, or trying to solve.</h1>
+      <p class="lede">Coaching, consulting, creative work, technology, events, teaching, place-based projects, and unusual collaborations are all welcome.</p>
     </div>
     <aside class="contact-direct">
       <p class="eyebrow">Direct Email</p>
@@ -56,9 +71,7 @@
         <option>Speaking and Teaching</option>
         <option>General Collaboration</option>
       </select></label>
-      <label>Brief description <textarea name="message" rows="7" required></textarea></label>
-      <label>Desired timing, optional <input name="timing"></label>
-      <label>How you heard about Greg, optional <input name="referral"></label>
+      <label>Message <textarea name="message" rows="7" required></textarea></label>
       <button class="button primary" type="submit">Prepare email inquiry</button>
       <p class="form-note" id="form-note" aria-live="polite"></p>
     </form>
@@ -82,19 +95,21 @@
     <div class="footer-grid">
       <div>
         <h2>Areas</h2>
-        <a href="people.html">People</a><a href="ideas.html">Ideas</a><a href="brands.html">Brands</a><a href="technology.html">Technology</a><a href="experiences.html">Experiences</a><a href="places.html">Places</a>
+        <a href="ventures.html#people">People</a><a href="ventures.html#ideas">Ideas</a><a href="ventures.html#brands">Brands</a><a href="ventures.html#technology">Technology</a><a href="ventures.html#experiences">Experiences</a><a href="ventures.html#places">Places</a>
       </div>
       <div>
         <h2>Ventures</h2>
         <a href="https://castellanoscoaching.com">Castellanos Coaching</a>
-        <a href="brands.html">Castellanos Creative</a>
-        <a href="experiences.html">Recreation Experiences</a>
-        <a href="places.html">Common Ground Works</a>
+        <a href="ventures.html#ideas">Castellanos Consulting</a>
+        <a href="ventures.html#brands">Castellanos Creative</a>
+        <a href="ventures.html#technology">AI You Trust</a>
+        <a href="ventures.html#experiences">Recreation Experiences</a>
+        <a href="https://makeplacesbetter.com">Make Places Better</a>
       </div>
       <div>
         <h2>Connect</h2>
-        <a href="work.html">Work</a>
-        <a href="speaking.html">Speaking and teaching</a>
+        <a href="ventures.html">Ventures</a>
+        <a href="about.html#speaking">Speaking and teaching</a>
         <a href="contact.html">Contact</a>
         <a href="privacy.html">Privacy</a>
       </div>

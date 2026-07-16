@@ -11,11 +11,25 @@
   <meta property="og:description" content="The umbrella site for Gregory Castellanos, a Northern California founder, learning designer, executive function coach, AI evaluation specialist, event producer, and inventor.">
   <meta property="og:url" content="https://gregcastellanos.com/">
   <meta property="og:image" content="https://gregcastellanos.com/assets/images/gregory-castellanos-logo-light.png">
+  <meta property="og:image:width" content="1640">
+  <meta property="og:image:height" content="650">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://gregcastellanos.com/assets/images/gregory-castellanos-logo-light.png">
   <meta name="theme-color" content="#10243a">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem("greg-theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = stored || (systemDark ? "dark" : "light");
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://gregcastellanos.com/#greg-castellanos","name":"Gregory Castellanos","url":"https://gregcastellanos.com","jobTitle":["Creative strategist","Educator","Coach","Designer","Technologist","Producer","Entrepreneur"],"address":{"@type":"PostalAddress","addressRegion":"California","addressCountry":"US"},"knowsAbout":["People","Ideas","Brands","Technology","Experiences","Places"]},{"@type":"WebSite","@id":"https://gregcastellanos.com/#website","name":"Gregory Castellanos","url":"https://gregcastellanos.com","description":"The umbrella site for Gregory Castellanos, a Northern California founder, learning designer, executive function coach, AI evaluation specialist, event producer, and inventor."},{"@type":"WebPage","@id":"https://gregcastellanos.com/#webpage","url":"https://gregcastellanos.com/","name":"Gregory Castellanos | People, Ideas, Brands, Technology, Experiences, Places","description":"The umbrella site for Gregory Castellanos, a Northern California founder, learning designer, executive function coach, AI evaluation specialist, event producer, and inventor.","isPartOf":{"@id":"https://gregcastellanos.com/#website"},"about":{"@id":"https://gregcastellanos.com/#greg-castellanos"}}]}</script>
 </head>
 <body class="home">
@@ -27,36 +41,37 @@
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">Menu</button>
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="index.html" aria-current="page">Home</a><a href="people.html" >People</a><a href="ideas.html" >Ideas</a><a href="brands.html" >Brands</a><a href="technology.html" >Technology</a><a href="experiences.html" >Experiences</a><a href="places.html" >Places</a><a href="work.html" >Work</a><a href="about.html" >About</a><a href="contact.html" >Contact</a>
+      <a href="index.html" aria-current="page">Home</a><a href="ventures.html" >Ventures</a><a href="about.html" >About</a><a href="contact.html" >Contact</a>
     </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">Theme</button>
   </header>
   <main id="main">
     <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">Greg Castellanos</p>
       <h1>Clearer systems for people, ideas, brands, technology, experiences, and places.</h1>
-      <p class="lede">I help complex work become clear, useful, and ready to move.</p>
+      <p class="lede">I help multidisciplinary work become easier to understand, organize, and bring into the world. My work moves across coaching, learning design, AI, creative strategy, events, and place.</p>
       <div class="cta-row">
         <a class="button primary" href="#ecosystem">Explore the work</a>
-        <a class="button secondary" href="contact.html">Talk with Greg</a>
+        <a class="button secondary" href="contact.html">Start a conversation</a>
       </div>
       <div class="area-rail" aria-label="Six-part ecosystem">
-    <a href="people.html" style="--area:#315d82">
+    <a href="ventures.html#people" style="--area:#315d82">
           <span>People</span>
           <small>Clarity in motion</small>
-        </a><a href="ideas.html" style="--area:#7b8f6f">
+        </a><a href="ventures.html#ideas" style="--area:#7b8f6f">
           <span>Ideas</span>
           <small>The real opportunity</small>
-        </a><a href="brands.html" style="--area:#a57933">
+        </a><a href="ventures.html#brands" style="--area:#a57933">
           <span>Brands</span>
           <small>Meaning made visible</small>
-        </a><a href="technology.html" style="--area:#233f63">
+        </a><a href="ventures.html#technology" style="--area:#233f63">
           <span>Technology</span>
           <small>Tools people can trust</small>
-        </a><a href="experiences.html" style="--area:#825c43">
+        </a><a href="ventures.html#experiences" style="--area:#825c43">
           <span>Experiences</span>
           <small>Gatherings with intention</small>
-        </a><a href="places.html" style="--area:#536f58">
+        </a><a href="ventures.html#places" style="--area:#536f58">
           <span>Places</span>
           <small>Potential made practical</small>
         </a>
@@ -68,123 +83,123 @@
   </section>
   <section class="band" id="ecosystem">
     <div class="section-header">
-    <p class="eyebrow">Six-Part Ecosystem</p>
-    <h2>Six lanes, one practice.</h2>
-    <p>Each area has its own focus and a shared way of working: understand the people, shape the system, and make the next step usable.</p>
+    <p class="eyebrow">Venture Pathways</p>
+    <h2>Six connected ways the work takes shape.</h2>
+    <p>Each pathway has a clear venture, audience, and next step.</p>
   </div>
-    <div class="ecosystem-grid">
-    <article class="area-panel" style="--area:#315d82">
+    <div class="venture-index">
+    <article class="venture-row" id="people" style="--area:#315d82">
           <div class="area-index">01</div>
-          <p class="eyebrow">Castellanos Coaching</p>
-          <h3>People</h3>
-          <p class="purpose">Coaching and learning systems that help people build practical independence.</p>
-          <p>Executive function coaching, neurodiversity support, family collaboration, transition planning, academic support, and practical life systems.</p>
-          <a class="text-link" href="people.html">Explore People</a>
-        </article><article class="area-panel" style="--area:#7b8f6f">
+          <div>
+            <p class="eyebrow">People</p>
+            <h3>Castellanos Coaching</h3>
+            <p>Executive function, practical independence, education, and support for neurodivergent teens, adults, and families.</p>
+          </div>
+          <a class="text-link" href="https://castellanoscoaching.com">Visit site</a>
+        </article><article class="venture-row" id="ideas" style="--area:#7b8f6f">
           <div class="area-index">02</div>
-          <p class="eyebrow">Castellanos Consulting</p>
-          <h3>Ideas</h3>
-          <p class="purpose">Turning complex ideas into clear plans, programs, and operating systems.</p>
-          <p>Strategy, program design, founder operations, community programs, partnerships, conservation concepts, and fundable project logic.</p>
-          <a class="text-link" href="ideas.html">Explore Ideas</a>
-        </article><article class="area-panel" style="--area:#a57933">
+          <div>
+            <p class="eyebrow">Ideas</p>
+            <h3>Castellanos Consulting</h3>
+            <p>Strategy and project development for ambitious ideas, unusual opportunities, and complicated plans.</p>
+          </div>
+          <a class="text-link" href="contact.html?area=Ideas">Start with Ideas</a>
+        </article><article class="venture-row" id="brands" style="--area:#a57933">
           <div class="area-index">03</div>
-          <p class="eyebrow">Castellanos Creative</p>
-          <h3>Brands</h3>
-          <p class="purpose">Making meaningful work easier to understand, explain, and trust.</p>
-          <p>Positioning, naming, messaging, websites, pitch materials, presentations, content systems, and launch direction.</p>
-          <a class="text-link" href="brands.html">Explore Brands</a>
-        </article><article class="area-panel" style="--area:#233f63">
+          <div>
+            <p class="eyebrow">Brands</p>
+            <h3>Castellanos Creative</h3>
+            <p>Brand strategy, messaging, websites, presentations, identity direction, and creative support.</p>
+          </div>
+          <a class="text-link" href="contact.html?area=Brands">Start with Brands</a>
+        </article><article class="venture-row" id="technology" style="--area:#233f63">
           <div class="area-index">04</div>
-          <p class="eyebrow">AI You Trust</p>
-          <h3>Technology</h3>
-          <p class="purpose">Human-centered AI, evaluation, learning tools, and creative technology.</p>
-          <p>AI evaluation, AI literacy, prompt and output review, educational tools, digital systems, web tools, AV workflows, and responsible adoption.</p>
-          <a class="text-link" href="technology.html">Explore Technology</a>
-        </article><article class="area-panel" style="--area:#825c43">
+          <div>
+            <p class="eyebrow">Technology</p>
+            <h3>AI You Trust</h3>
+            <p>Human-centered AI, digital tools, creative technology, education, and responsible adoption.</p>
+          </div>
+          <a class="text-link" href="contact.html?area=Technology">Start with Technology</a>
+        </article><article class="venture-row" id="experiences" style="--area:#825c43">
           <div class="area-index">05</div>
-          <p class="eyebrow">Recreation Experiences</p>
-          <h3>Experiences</h3>
-          <p class="purpose">Events and gatherings shaped with sound, flow, hospitality, and calm production.</p>
-          <p>Corporate production, community events, retreats, fundraisers, radio, DJing, AV, stage management, and technical direction.</p>
-          <a class="text-link" href="experiences.html">Explore Experiences</a>
-        </article><article class="area-panel" style="--area:#536f58">
+          <div>
+            <p class="eyebrow">Experiences</p>
+            <h3>Recreation Experiences</h3>
+            <p>Events, retreats, sound, production, radio, and community gatherings shaped with intention.</p>
+          </div>
+          <a class="text-link" href="contact.html?area=Experiences">Start with Experiences</a>
+        </article><article class="venture-row" id="places" style="--area:#536f58">
           <div class="area-index">06</div>
-          <p class="eyebrow">Common Ground Works</p>
-          <h3>Places</h3>
-          <p class="purpose">Helping overlooked places become more useful, welcoming, and alive.</p>
-          <p>Place strategy, beautification, stewardship, guest readiness, hospitality thinking, creative reuse, and practical activation.</p>
-          <a class="text-link" href="places.html">Explore Places</a>
+          <div>
+            <p class="eyebrow">Places</p>
+            <h3>Make Places Better</h3>
+            <p>Creative property stewardship, beautification, hospitality, guest readiness, and thoughtful activation.</p>
+          </div>
+          <a class="text-link" href="https://makeplacesbetter.com">Visit site</a>
         </article>
   </div>
-  </section>
-  <section class="split-section">
-    <div>
-      <p class="eyebrow">How It Connects</p>
-      <h2>Greg turns scattered parts into a working whole.</h2>
-      <p>The work starts by finding the real situation, naming what matters, and building the next workable step.</p>
-      <p>The coaching practice uses Clarity, Alignment, Foundation, Expansion. The broader practice keeps that same respect for sequence.</p>
-    </div>
-    <div class="principles">
-      <span>See the whole system</span><span>Name the real problem</span><span>Connect disciplines</span><span>Make the vision tangible</span><span>Build trust through practical next steps</span>
-    </div>
   </section>
   <section class="band work-band">
     <div class="section-header">
     <p class="eyebrow">Selected Work</p>
-    <h2>Selected proof across the ecosystem.</h2>
-    <p>A few public anchors and private directions, shown without inventing outcomes or exposing details that should stay private.</p>
+    <h2>A few anchors, not a complete archive.</h2>
+    <p>Public ventures and selected projects described simply, with private details left private.</p>
   </div>
     <div class="work-list editorial-work-list">
-    <article class="work-item project-card" data-areas="people ideas technology">
+    <article class="work-item project-card" data-areas="brands technology experiences">
           <div class="project-mark" aria-hidden="true">01</div>
           <div class="project-copy">
-            <p class="project-type">Dedicated site active at castellanoscoaching.com.</p>
-            <h3>Castellanos Coaching</h3>
-            <p>A dedicated coaching practice for executive function, independence, family support, transition planning, and practical capability.</p>
-            <p class="role-line"><strong>Greg's role:</strong> Founder, coach, educator, framework creator</p>
-            <div class="tag-row"><span>People</span><span>Ideas</span><span>Technology</span></div>
-            <a class="text-link" href="https://castellanoscoaching.com">Visit Castellanos Coaching</a>
-          </div>
-        </article><article class="work-item project-card" data-areas="people ideas brands technology experiences places">
-          <div class="project-mark" aria-hidden="true">02</div>
-          <div class="project-copy">
-            <p class="project-type">Legacy venture and reference point for current community-building work.</p>
-            <h3>Local Maker Mart</h3>
-            <p>A nonprofit community arts center and maker hub in North Beach, San Francisco.</p>
-            <p class="role-line"><strong>Greg's role:</strong> Founder and organizer</p>
-            <div class="tag-row"><span>People</span><span>Ideas</span><span>Brands</span></div>
-            
-          </div>
-        </article><article class="work-item project-card" data-areas="brands technology experiences">
-          <div class="project-mark" aria-hidden="true">03</div>
-          <div class="project-copy">
-            <p class="project-type">Legacy venture informing Recreation Experiences.</p>
             <h3>Recreation Sound Systems</h3>
             <p>Patented sustainable audio technology and a production practice rooted in sound, design, and live operations.</p>
             <p class="role-line"><strong>Greg's role:</strong> Founder, producer, technical director</p>
             <div class="tag-row"><span>Brands</span><span>Technology</span><span>Experiences</span></div>
             
           </div>
+        </article><article class="work-item project-card" data-areas="people ideas brands technology experiences places">
+          <div class="project-mark" aria-hidden="true">02</div>
+          <div class="project-copy">
+            <h3>Local Maker Mart</h3>
+            <p>A nonprofit community arts center and maker hub in North Beach, San Francisco.</p>
+            <p class="role-line"><strong>Greg's role:</strong> Founder and organizer</p>
+            <div class="tag-row"><span>People</span><span>Ideas</span><span>Brands</span></div>
+            
+          </div>
+        </article><article class="work-item project-card" data-areas="people experiences technology">
+          <div class="project-mark" aria-hidden="true">03</div>
+          <div class="project-copy">
+            <h3>Selectas Flow</h3>
+            <p>A radio and music platform connected to listening, curation, rhythm, community, and the culture of gathering.</p>
+            <p class="role-line"><strong>Greg's role:</strong> Host, DJ, curator</p>
+            <div class="tag-row"><span>People</span><span>Experiences</span><span>Technology</span></div>
+            
+          </div>
         </article><article class="work-item project-card" data-areas="ideas brands experiences places">
           <div class="project-mark" aria-hidden="true">04</div>
           <div class="project-copy">
-            <p class="project-type">Active platform and evolving body of work.</p>
-            <h3>Recreation Experiences</h3>
-            <p>A broader experience platform for events, retreats, fundraisers, workshops, and community gatherings.</p>
-            <p class="role-line"><strong>Greg's role:</strong> Creative strategist, host, producer, curator</p>
+            <h3>Stay In The Light</h3>
+            <p>A retreat and gathering concept shaped around presence, hospitality, and place-based experience.</p>
+            <p class="role-line"><strong>Greg's role:</strong> Concept developer, creative director, producer</p>
             <div class="tag-row"><span>Ideas</span><span>Brands</span><span>Experiences</span></div>
+            
+          </div>
+        </article><article class="work-item project-card" data-areas="ideas experiences places">
+          <div class="project-mark" aria-hidden="true">05</div>
+          <div class="project-copy">
+            <h3>Kolob Gate Gardens</h3>
+            <p>A place-based garden and hospitality concept connected to stewardship, beauty, and gathering.</p>
+            <p class="role-line"><strong>Greg's role:</strong> Concept, stewardship, and experience development</p>
+            <div class="tag-row"><span>Ideas</span><span>Experiences</span><span>Places</span></div>
             
           </div>
         </article>
   </div>
-    <a class="button secondary" href="work.html">View the work system</a>
+    <a class="button secondary" href="ventures.html#selected-projects">View ventures</a>
   </section>
   <section class="portrait-section">
     <div class="portrait-card">
       <p class="eyebrow">About Greg</p>
-      <h2>Different fields, one consistent skill.</h2>
-      <p>Education, coaching, AI, invention, events, community programs, and creative strategy all point to the same throughline: make ideas useful in real life.</p>
+      <h2>A multidisciplinary career built around helping people and ideas take shape.</h2>
+      <p>Education, coaching, AI, invention, events, community programs, sound, and place all point toward the same pattern: understand the system, care about the people, and make the next step practical.</p>
       <a class="text-link" href="about.html">Read the narrative</a>
     </div>
     <div class="portrait-note">
@@ -197,7 +212,7 @@
     <h2>What is active now.</h2>
     <p>Current initiatives, experiments, talks, and collaborations.</p>
   </div>
-    <div class="focus-list"><article><h3>AI evaluation, AI literacy, and human-centered tool design.</h3></article><article><h3>Executive function coaching and practical independence systems.</h3></article><article><h3>Events, learning programs, and Common Ground Works projects that help places come alive.</h3></article></div>
+    <div class="focus-list"><article><h3>AI evaluation, AI literacy, and human-centered tool design.</h3></article><article><h3>Executive function coaching and practical independence systems.</h3></article><article><h3>Events, learning programs, and Make Places Better projects that help places come alive.</h3></article></div>
   </section>
   <section class="contact-invite">
     <p class="eyebrow">Contact</p>
@@ -213,19 +228,21 @@
     <div class="footer-grid">
       <div>
         <h2>Areas</h2>
-        <a href="people.html">People</a><a href="ideas.html">Ideas</a><a href="brands.html">Brands</a><a href="technology.html">Technology</a><a href="experiences.html">Experiences</a><a href="places.html">Places</a>
+        <a href="ventures.html#people">People</a><a href="ventures.html#ideas">Ideas</a><a href="ventures.html#brands">Brands</a><a href="ventures.html#technology">Technology</a><a href="ventures.html#experiences">Experiences</a><a href="ventures.html#places">Places</a>
       </div>
       <div>
         <h2>Ventures</h2>
         <a href="https://castellanoscoaching.com">Castellanos Coaching</a>
-        <a href="brands.html">Castellanos Creative</a>
-        <a href="experiences.html">Recreation Experiences</a>
-        <a href="places.html">Common Ground Works</a>
+        <a href="ventures.html#ideas">Castellanos Consulting</a>
+        <a href="ventures.html#brands">Castellanos Creative</a>
+        <a href="ventures.html#technology">AI You Trust</a>
+        <a href="ventures.html#experiences">Recreation Experiences</a>
+        <a href="https://makeplacesbetter.com">Make Places Better</a>
       </div>
       <div>
         <h2>Connect</h2>
-        <a href="work.html">Work</a>
-        <a href="speaking.html">Speaking and teaching</a>
+        <a href="ventures.html">Ventures</a>
+        <a href="about.html#speaking">Speaking and teaching</a>
         <a href="contact.html">Contact</a>
         <a href="privacy.html">Privacy</a>
       </div>

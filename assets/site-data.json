@@ -9,32 +9,8 @@
       "index.html"
     ],
     [
-      "People",
-      "people.html"
-    ],
-    [
-      "Ideas",
-      "ideas.html"
-    ],
-    [
-      "Brands",
-      "brands.html"
-    ],
-    [
-      "Technology",
-      "technology.html"
-    ],
-    [
-      "Experiences",
-      "experiences.html"
-    ],
-    [
-      "Places",
-      "places.html"
-    ],
-    [
-      "Work",
-      "work.html"
+      "Ventures",
+      "ventures.html"
     ],
     [
       "About",
@@ -51,8 +27,8 @@
       "name": "People",
       "venture": "Castellanos Coaching",
       "url": "https://castellanoscoaching.com",
-      "purpose": "Coaching and learning systems that help people build practical independence.",
-      "intro": "Executive function coaching, neurodiversity support, family collaboration, transition planning, academic support, and practical life systems.",
+      "purpose": "Executive function, practical independence, education, and support for neurodivergent teens, adults, and families.",
+      "intro": "Executive function, practical independence, education, and support for neurodivergent teens, adults, and families.",
       "cue": "Clarity in motion",
       "color": "#315d82"
     },
@@ -60,8 +36,8 @@
       "slug": "ideas",
       "name": "Ideas",
       "venture": "Castellanos Consulting",
-      "purpose": "Turning complex ideas into clear plans, programs, and operating systems.",
-      "intro": "Strategy, program design, founder operations, community programs, partnerships, conservation concepts, and fundable project logic.",
+      "purpose": "Strategy and project development for ambitious ideas, unusual opportunities, and complicated plans.",
+      "intro": "Strategy and project development for ambitious ideas, unusual opportunities, and complicated plans.",
       "cue": "The real opportunity",
       "color": "#7b8f6f"
     },
@@ -69,8 +45,8 @@
       "slug": "brands",
       "name": "Brands",
       "venture": "Castellanos Creative",
-      "purpose": "Making meaningful work easier to understand, explain, and trust.",
-      "intro": "Positioning, naming, messaging, websites, pitch materials, presentations, content systems, and launch direction.",
+      "purpose": "Brand strategy, messaging, websites, presentations, identity direction, and creative support.",
+      "intro": "Brand strategy, messaging, websites, presentations, identity direction, and creative support.",
       "cue": "Meaning made visible",
       "color": "#a57933"
     },
@@ -78,8 +54,8 @@
       "slug": "technology",
       "name": "Technology",
       "venture": "AI You Trust",
-      "purpose": "Human-centered AI, evaluation, learning tools, and creative technology.",
-      "intro": "AI evaluation, AI literacy, prompt and output review, educational tools, digital systems, web tools, AV workflows, and responsible adoption.",
+      "purpose": "Human-centered AI, digital tools, creative technology, education, and responsible adoption.",
+      "intro": "Human-centered AI, digital tools, creative technology, education, and responsible adoption.",
       "cue": "Tools people can trust",
       "color": "#233f63"
     },
@@ -87,17 +63,18 @@
       "slug": "experiences",
       "name": "Experiences",
       "venture": "Recreation Experiences",
-      "purpose": "Events and gatherings shaped with sound, flow, hospitality, and calm production.",
-      "intro": "Corporate production, community events, retreats, fundraisers, radio, DJing, AV, stage management, and technical direction.",
+      "purpose": "Events, retreats, sound, production, radio, and community gatherings shaped with intention.",
+      "intro": "Events, retreats, sound, production, radio, and community gatherings shaped with intention.",
       "cue": "Gatherings with intention",
       "color": "#825c43"
     },
     {
       "slug": "places",
       "name": "Places",
-      "venture": "Common Ground Works",
-      "purpose": "Helping overlooked places become more useful, welcoming, and alive.",
-      "intro": "Place strategy, beautification, stewardship, guest readiness, hospitality thinking, creative reuse, and practical activation.",
+      "venture": "Make Places Better",
+      "url": "https://makeplacesbetter.com",
+      "purpose": "Creative property stewardship, beautification, hospitality, guest readiness, and thoughtful activation.",
+      "intro": "Creative property stewardship, beautification, hospitality, guest readiness, and thoughtful activation.",
       "cue": "Potential made practical",
       "color": "#536f58"
     }
@@ -109,21 +86,6 @@
     "Expansion"
   ],
   "work": [
-    {
-      "name": "Castellanos Coaching",
-      "areas": [
-        "People",
-        "Ideas",
-        "Technology"
-      ],
-      "overview": "A dedicated coaching practice for executive function, independence, family support, transition planning, and practical capability.",
-      "situation": "People and families often need a clearer way to organize growth without reducing a person to a problem.",
-      "role": "Founder, coach, educator, framework creator",
-      "contribution": "Created the Castellanos Compass, connected education and coaching practice, shaped service language, and built a dedicated coaching destination.",
-      "status": "Dedicated site active at castellanoscoaching.com.",
-      "privacy": "Public venture",
-      "link": "https://castellanoscoaching.com"
-    },
     {
       "name": "Local Maker Mart",
       "areas": [
@@ -156,35 +118,6 @@
       "privacy": "Public venture"
     },
     {
-      "name": "Recreation Experiences",
-      "areas": [
-        "Ideas",
-        "Brands",
-        "Experiences",
-        "Places"
-      ],
-      "overview": "A broader experience platform for events, retreats, fundraisers, workshops, and community gatherings.",
-      "situation": "People are hungry for gatherings that feel alive, well held, and intentionally designed.",
-      "role": "Creative strategist, host, producer, curator",
-      "contribution": "Shapes concept, production, hospitality, sound, run-of-show, crew, and stakeholder coordination.",
-      "status": "Active platform and evolving body of work.",
-      "privacy": "Public venture with private project details withheld"
-    },
-    {
-      "name": "AI You Trust",
-      "areas": [
-        "People",
-        "Ideas",
-        "Technology"
-      ],
-      "overview": "A human-centered AI direction focused on evaluation, literacy, and tools people can use with judgment.",
-      "situation": "AI can help people learn and create, but it can also make people feel overwhelmed or dependent.",
-      "role": "Concept lead, educator, strategist",
-      "contribution": "Connects learning design, prompt evaluation, output review, harm awareness, and practical AI adoption.",
-      "status": "Active concept and development direction.",
-      "privacy": "Public concept"
-    },
-    {
       "name": "Stay In The Light",
       "areas": [
         "Ideas",
@@ -200,34 +133,6 @@
       "privacy": "Private details withheld"
     },
     {
-      "name": "Bodega Bay Hospitality Work",
-      "areas": [
-        "Ideas",
-        "Experiences",
-        "Places"
-      ],
-      "overview": "Hospitality and property-readiness work connected to guest experience, organization, and practical improvement.",
-      "situation": "A property can have real potential but still need stronger systems, clearer presentation, and better guest readiness.",
-      "role": "Steward, organizer, strategist, hands-on problem solver",
-      "contribution": "Supported practical improvements, spatial organization, guest-readiness thinking, and experience-led property care.",
-      "status": "Selected private work described without owner or address details.",
-      "privacy": "Private owner and location details withheld"
-    },
-    {
-      "name": "Common Ground Works",
-      "areas": [
-        "Ideas",
-        "Experiences",
-        "Places"
-      ],
-      "overview": "A place-based practice for stewardship, guest readiness, hospitality thinking, creative reuse, and practical activation.",
-      "situation": "Some properties and gathering places have real potential but need clearer purpose, readiness, care, and presentation.",
-      "role": "Place strategist, steward, organizer",
-      "contribution": "Connects practical improvement, hospitality, visual judgment, maintenance thinking, and experience design.",
-      "status": "Active place-based direction with private location details withheld.",
-      "privacy": "Private details protected"
-    },
-    {
       "name": "Selectas Flow",
       "areas": [
         "People",
@@ -240,12 +145,26 @@
       "contribution": "Brings music, story, community connection, and production experience together through a public radio context.",
       "status": "Hosted on KGGV 95.1 FM.",
       "privacy": "Public creative work"
+    },
+    {
+      "name": "Kolob Gate Gardens",
+      "areas": [
+        "Ideas",
+        "Experiences",
+        "Places"
+      ],
+      "overview": "A place-based garden and hospitality concept connected to stewardship, beauty, and gathering.",
+      "situation": "A place with promise needs patient care, a clear point of view, and practical activation.",
+      "role": "Concept, stewardship, and experience development",
+      "contribution": "Connects place care, hospitality, programming, and guest-readiness thinking.",
+      "status": "Selected project with private operational details withheld.",
+      "privacy": "Private details protected"
     }
   ],
   "current": [
     "AI evaluation, AI literacy, and human-centered tool design.",
     "Executive function coaching and practical independence systems.",
-    "Events, learning programs, and Common Ground Works projects that help places come alive."
+    "Events, learning programs, and Make Places Better projects that help places come alive."
   ],
   "timeline": [
     "B.A. Interactive Multimedia",
@@ -256,7 +175,7 @@
     "Local Maker Mart nonprofit community arts center",
     "Castellanos Coaching and executive function systems",
     "AI evaluation, AI literacy, and tool development",
-    "Recreation Experiences and Common Ground Works"
+    "Recreation Experiences and Make Places Better"
   ],
   "speakingTopics": [
     "Executive function and independence",

@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://gregcastellanos.com/</loc></url>
-  <url><loc>https://gregcastellanos.com/people.html</loc></url>
-  <url><loc>https://gregcastellanos.com/ideas.html</loc></url>
-  <url><loc>https://gregcastellanos.com/brands.html</loc></url>
-  <url><loc>https://gregcastellanos.com/technology.html</loc></url>
-  <url><loc>https://gregcastellanos.com/experiences.html</loc></url>
-  <url><loc>https://gregcastellanos.com/places.html</loc></url>
-  <url><loc>https://gregcastellanos.com/work.html</loc></url>
+  <url><loc>https://gregcastellanos.com/ventures.html</loc></url>
   <url><loc>https://gregcastellanos.com/about.html</loc></url>
-  <url><loc>https://gregcastellanos.com/speaking.html</loc></url>
   <url><loc>https://gregcastellanos.com/contact.html</loc></url>
   <url><loc>https://gregcastellanos.com/privacy.html</loc></url>
 </urlset>

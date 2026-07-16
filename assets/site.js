@@ -1,3 +1,28 @@
+const themeToggle = document.querySelector(".theme-toggle");
+const applyTheme = (theme) => {
+  document.documentElement.dataset.theme = theme;
+  if (themeToggle) {
+    const dark = theme === "dark";
+    themeToggle.setAttribute("aria-pressed", String(dark));
+    themeToggle.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+    themeToggle.textContent = dark ? "Light" : "Dark";
+  }
+};
+try {
+  const stored = localStorage.getItem("greg-theme");
+  const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(stored || (systemDark ? "dark" : "light"));
+} catch {
+  applyTheme(document.documentElement.dataset.theme || "light");
+}
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem("greg-theme", next); } catch {}
+  });
+}
+
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
 if (toggle && nav) {
@@ -31,7 +56,7 @@ document.querySelectorAll(".filter").forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
     document.querySelectorAll(".filter").forEach((item) => item.classList.toggle("is-active", item === button));
-    document.querySelectorAll(".work-item").forEach((item) => {
+    document.querySelectorAll(".work-item, .directory-row").forEach((item) => {
       const visible = filter === "all" || item.dataset.areas?.split(" ").includes(filter);
       item.hidden = !visible;
     });
@@ -44,6 +69,12 @@ if (startedAt) startedAt.value = String(Date.now());
 
 const form = document.querySelector("#contact-form");
 if (form) {
+  const params = new URLSearchParams(window.location.search);
+  const area = params.get("area");
+  if (area) {
+    const select = form.querySelector('select[name="area"]');
+    if (select && [...select.options].some((option) => option.value === area || option.textContent === area)) select.value = area;
+  }
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(form);
@@ -65,8 +96,6 @@ if (form) {
       "Email: " + data.get("email"),
       "Organization: " + (data.get("organization") || ""),
       "Area: " + data.get("area"),
-      "Timing: " + (data.get("timing") || ""),
-      "Referral: " + (data.get("referral") || ""),
       "",
       String(data.get("message") || "")
     ].join("\n"));
