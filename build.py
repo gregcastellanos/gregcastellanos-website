@@ -21,8 +21,8 @@ BASE_URL = "https://gregcastellanos.com"
 NAME = "Gregory Castellanos"
 EMAIL = "gregcastellanoswork@gmail.com"
 COACHING_URL = "https://castellanoscoaching.com"
-# LinkedIn / social: add the real URL here to wire it into nav, footer, and schema.
-LINKEDIN_URL = ""  # e.g. "https://www.linkedin.com/in/…"
+# LinkedIn / social: wired into the footer and structured data.
+LINKEDIN_URL = "https://www.linkedin.com/in/gregcastellanos"
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -89,8 +89,8 @@ def ecosystem_art():
         f'<line x1="200" y1="200" x2="{x}" y2="{y}" stroke="currentColor" stroke-width="1.5" opacity=".28"/>'
         for x, y, _c, _l in nodes)
     dots = "".join(
-        f'<circle cx="{x}" cy="{y}" r="26" fill="{c}"/>'
-        f'<text x="{x}" y="{y+4}" text-anchor="middle" font-size="10.5" font-weight="700" '
+        f'<circle cx="{x}" cy="{y}" r="30" fill="{c}"/>'
+        f'<text x="{x}" y="{y+3.5}" text-anchor="middle" font-size="9" font-weight="700" '
         f'fill="#fff" font-family="Inter,sans-serif">{l}</text>'
         for x, y, c, l in nodes)
     return (
@@ -246,7 +246,7 @@ AREAS = [
             ("More than logistics",
              "A good experience is not just a schedule or a playlist. It is the relationship between sound, light, hospitality, setting, pacing, and what people are invited to do together — held with the calm that a decade of production builds."),
             ("Produced and supported",
-             "Greg was Executive Producer of Convergence 2026, a sold-out 250-person, 15-artist production, and has produced or supported 100+ events over ten years. Through CAVL, JNSQ, Got Light, and Vario he has supported productions for Google, Stripe, Atlassian, GitHub, Nasdaq, SF MoMA, and the World Economic Forum."),
+             "Greg was Executive Producer of Convergence 2026, a sold-out 250-person, 15-artist production, and has produced or supported 100+ events over ten years — from the Ghost Town Gala at Shangri-La Sonoma to GOAT My Valentine, a Goatlandia benefit in Sebastopol. Through CAVL, JNSQ, Got Light, and Vario he has supported productions for Google, Stripe, Atlassian, GitHub, Nasdaq, SF MoMA, and the World Economic Forum."),
             ("Sound at the root",
              "It began with Recreation Sound Systems — two U.S. patents for sustainable, resonance-based audio — and continues on the air through Selectas Flow on KGGV 95.1 FM. Private venue and client details stay private."),
         ],
@@ -326,7 +326,9 @@ CASES = [
         "name": "Recreation Sound Systems", "kicker": "Invention & Product",
         "areas": ["technology", "brands", "experiences"],
         "role": "Founder & CEO (2013–2020)",
-        "blurb": "Built a patented audio-hardware and event-production company from the ground up — earning two U.S. patents for sustainable, resonance-based speaker technology and taking product from concept to manufactured reality.",
+        "blurb": "Built a patented audio-hardware and event-production company from the ground up — earning two U.S. design patents, "
+                 "<a href=\"https://patents.google.com/patent/USD739846S/en\">D739,846</a> and "
+                 "<a href=\"https://patents.google.com/patent/USD815617S/en\">D815,617</a>, and taking product from concept to manufactured reality.",
         "status": "Legacy venture; patents held.", "tags": ["Technology", "Brands", "Experiences"],
     },
     {
@@ -361,8 +363,8 @@ CASES = [
     {
         "name": "Enterprise Production Support", "kicker": "Live Production",
         "areas": ["experiences", "technology"],
-        "role": "GFX / Playback / V1 (freelance)",
-        "blurb": "Through CAVL, JNSQ, Got Light, and Vario, Greg has supported productions for Google, Stripe, Atlassian, GitHub, Nasdaq, SF MoMA, and the World Economic Forum — managing 200+ slide decks per show with live cue-to-cue calling.",
+        "role": "GFX / Playback / V1 Operator (freelance)",
+        "blurb": "A live corporate-AV professional with 15+ years on conferences, general sessions, and executive keynotes. Through CAVL, JNSQ, Got Light, and Vario, Greg has supported productions for Google, Stripe, Atlassian, GitHub, Nasdaq, SF MoMA, and the World Economic Forum — running graphics, playback, and V1 with live cue-to-cue calling and composure in show-critical environments.",
         "status": "2022–present.", "tags": ["Experiences", "Technology"],
     },
     {
@@ -397,7 +399,9 @@ TIMELINE = [
 ]
 
 RECOGNITION = [
-    "Two U.S. patents for sustainable, resonance-based audio technology.",
+    'Two U.S. design patents for portable audio technology — '
+    '<a href="https://patents.google.com/patent/USD739846S/en">D739,846</a> (Portable sound system) and '
+    '<a href="https://patents.google.com/patent/USD815617S/en">D815,617</a> (Portable yoga block speaker).',
     "STEAM curriculum adopted across multiple TechShop locations nationally.",
     "Selected as Lead Educator, Next Generation Scholars Summer Academy at The Branson School (2024).",
     "Graduated with Honors at both degree levels, Columbia College Chicago.",
@@ -422,6 +426,13 @@ SPEAKING_TOPICS = [
 ]
 SPEAKING_FORMATS = ["Workshops", "Talks", "Panels", "Parent groups", "School sessions",
                     "Retreat programs", "Guest teaching", "Moderation"]
+
+TESTIMONIALS = [
+    ("Greg helped me stop overthinking and actually take steps. We worked on school, jobs, track, and planning my future in a way that felt real.", "Logan D.", "Coaching client"),
+    ("Greg actually listened to what I wanted. He helped me think about school, work, and real-life stuff without making me feel talked down to.", "Rune C.", "Coaching client"),
+    ("Greg helps me work on being more independent. I have a real job now, I go to concerts, and I'm learning how to handle more things on my own.", "Alex G.", "Coaching client"),
+    ("Greg helped me get organized and start doing things instead of avoiding them. He made everything feel less overwhelming.", "Seth A.", "Coaching client"),
+]
 
 FAQ = [
     ("Is this the coaching website?",
@@ -648,9 +659,9 @@ def build_home():
     }]
     body = f"""    <section class="hero">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Gregory Castellanos · Bay Area / Sonoma County</p>
-        <h1>Complex, human problems — turned into systems that work.</h1>
-        <p class="lede">Founder, learning designer, executive function coach, AI evaluation specialist, event producer, and inventor. Twenty years of turning ambiguous, people-shaped problems into clear, usable systems — across six connected practices.</p>
+        <p class="eyebrow">Gregory Castellanos · Bay Area &amp; Sonoma County</p>
+        <h1>The one to call when the work is complicated and human.</h1>
+        <p class="lede">Founder, learning designer, and executive-function coach. AI evaluator, live-event producer, and two-time U.S. patent holder. Twenty years, one throughline: see the whole system, understand the people inside it, and build the next step they can actually use.</p>
         <div class="cta-row">
           <a class="button primary" href="#ecosystem">Explore the work</a>
           <a class="button secondary" href="contact.html">Start a conversation</a>
@@ -813,6 +824,10 @@ def build_about():
          "Castellanos Coaching, consulting, creative direction, and Common Ground Works sit under one umbrella because they all involve people, environments, and decisions that need to become usable."),
     ]
     narr = "".join(f'<article><h2>{h}</h2><p>{p}</p></article>' for h, p in narrative)
+    quotes = "".join(
+        f'<figure class="quote-card reveal" style="margin:0"><blockquote>&ldquo;{q}&rdquo;</blockquote>'
+        f'<figcaption class="attr">{name} · {role}</figcaption></figure>'
+        for q, name, role in TESTIMONIALS)
     extra = [{
         "@type": "AboutPage", "@id": BASE_URL + "/about.html#about",
         "mainEntity": {"@id": BASE_URL + "/#greg"},
@@ -858,14 +873,10 @@ def build_about():
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">In their words</p>
-          <h2>Voices from the work.</h2>
-          <p>Testimonials are added only with permission and never invented. These slots are reserved for real quotes from coaching families, production leads, and education partners.</p>
+          <h2>Voices from the coaching work.</h2>
+          <p>Real words from Castellanos Coaching clients. Nothing here is invented, and testimonials are shared only with permission.</p>
         </div>
-        <div class="quote-grid">
-          <div class="quote-card placeholder reveal"><blockquote>Reserved for a coaching-family testimonial.</blockquote><p class="attr">Castellanos Coaching</p></div>
-          <div class="quote-card placeholder reveal"><blockquote>Reserved for a production or education partner.</blockquote><p class="attr">Events &amp; teaching</p></div>
-          <div class="quote-card placeholder reveal"><blockquote>Reserved for a founder or organization Greg has advised.</blockquote><p class="attr">Strategy &amp; ideas</p></div>
-        </div>
+        <div class="quote-grid">{quotes}</div>
       </div>
     </section>
     <section class="section band-alt">
