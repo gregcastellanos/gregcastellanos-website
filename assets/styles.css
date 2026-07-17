@@ -110,8 +110,8 @@ main, section, article, aside, div, header, footer, nav, form { min-width: 0; }
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: clamp(1rem, 2.5vw, 2rem);
-  min-height: clamp(4rem, 6vw, 5rem);
-  padding: .65rem var(--gutter);
+  min-height: clamp(6.4rem, 9vw, 8rem);
+  padding: .7rem var(--gutter);
   background: var(--logo-blue);
   backdrop-filter: blur(18px) saturate(1.1);
   border-bottom: 1px solid rgba(255,255,255,.14);
@@ -123,13 +123,13 @@ main, section, article, aside, div, header, footer, nav, form { min-width: 0; }
   text-decoration: none;
   min-width: 0;
   width: auto;
-  max-width: min(18.5rem, 34vw);
+  max-width: min(37rem, 42vw);
 }
 .brand picture { display: block; width: 100%; }
 .brand-logo {
   display: block;
   width: 100%;
-  max-height: 3.15rem;
+  max-height: 6.3rem;
   object-fit: contain;
   object-position: left center;
 }
@@ -767,7 +767,7 @@ textarea { resize: vertical; }
 }
 .footer-logo {
   display: block;
-  width: min(24rem, 100%);
+  width: min(14.4rem, 100%);
   height: auto;
   object-fit: contain;
   object-position: center;
@@ -840,13 +840,14 @@ textarea { resize: vertical; }
 }
 @media (max-width: 640px) {
   :root { --gutter: 1.25rem; --section-y: 4.25rem; --section-y-tight: 3rem; }
-  .site-header { min-height: 4.6rem; grid-template-columns: minmax(0, 1fr) auto; gap: .28rem .45rem; }
+  .site-header { min-height: 5.5rem; grid-template-columns: minmax(0, 1fr) auto; gap: .28rem .45rem; }
   .menu-toggle { min-height: 2.45rem; padding: .5rem .65rem; font-size: .9rem; }
   .theme-toggle { width: 2.45rem; min-height: 1.42rem; padding: .1rem; }
   .theme-switch { width: 1.92rem; height: 1rem; padding: .11rem; }
   .theme-thumb { width: .78rem; height: .78rem; }
   .theme-toggle[aria-pressed="true"] .theme-thumb { transform: translateX(.86rem); }
   .brand { grid-column: 1; grid-row: 1 / span 2; max-width: none; }
+  .brand-logo { max-height: 4.7rem; }
   .menu-toggle { grid-column: 2; grid-row: 1; }
   .theme-toggle { display: inline-flex; grid-column: 2; grid-row: 2; justify-self: end; }
   .brand-fallback strong { font-size: clamp(.95rem, 4.6vw, 1.2rem); }
@@ -878,10 +879,11 @@ textarea { resize: vertical; }
 @media (max-width: 460px) {
   .site-header {
     grid-template-columns: minmax(0, 1fr) auto;
-    min-height: 4.35rem;
+    min-height: 5.1rem;
     gap: .4rem;
   }
   .brand { grid-column: 1; grid-row: 1 / span 2; max-width: none; }
+  .brand-logo { max-height: 4.05rem; }
   .brand-fallback strong { font-size: .95rem; }
   .menu-toggle { grid-column: 2; grid-row: 1; width: 2.45rem; padding: 0; }
   .menu-toggle span:last-child { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
