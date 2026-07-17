@@ -92,6 +92,9 @@ if (form) {
       note.textContent = "Please complete the required fields before sending the inquiry.";
       return;
     }
+    // Keep the delivered email clean; spam checks above already used these.
+    data.delete("website");
+    data.delete("startedAt");
     const endpoint = form.dataset.endpoint || form.getAttribute("action") || "";
     if (endpoint) {
       try {

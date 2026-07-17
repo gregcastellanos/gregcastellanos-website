@@ -4,20 +4,19 @@ Static GitHub Pages site for gregcastellanos.com.
 
 ## Contact form
 
-The contact form uses Web3Forms and posts directly from the static GitHub Pages
-site to:
+The contact form submits to **Web3Forms** (`https://api.web3forms.com/submit`).
+The `access_key` hidden field in `contact.html` is a public, email-scoped key
+(safe to commit); Web3Forms handles delivery to gregcastellanoswork@gmail.com and
+server-side spam filtering. To change the destination, replace the key with one
+from a new Web3Forms form.
 
-```html
-https://api.web3forms.com/submit
-```
+The form also keeps a client-side honeypot, a timing check, and validation, and
+posts via `fetch` for inline success/error messages (native POST works without
+JS too).
 
-The public Web3Forms access key is included in `contact.html`, as intended for
-client-side Web3Forms integrations. Delivery is associated with:
-`gregcastellanoswork@gmail.com`.
-
-Before launch, test: successful submission, error state, spam trap, keyboard
-flow, mobile layout, the confirmation message, and delivery to
-`gregcastellanoswork@gmail.com`.
+Note: Web3Forms only accepts submissions from a real browser (it blocks
+server/datacenter requests), so verify actual delivery by submitting once from
+the deployed site or a browser — not from a script.
 
 ## Notes
 

@@ -68,11 +68,13 @@
     </aside>
   </section>
   <section class="contact-layout">
+    <!-- Web3Forms: the access_key below is a public, email-scoped key (safe to commit). It handles delivery + spam. -->
     <form class="contact-form" id="contact-form" method="post" action="https://api.web3forms.com/submit" data-endpoint="https://api.web3forms.com/submit" novalidate>
       <input type="hidden" name="access_key" value="92ce1bad-d343-4955-8845-6fcda3f4a9b6">
-      <input type="hidden" name="subject" value="New gregcastellanos.com inquiry">
+      <input type="hidden" name="subject" value="New inquiry from gregcastellanos.com">
       <input type="hidden" name="from_name" value="gregcastellanos.com">
       <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none !important">
       <input type="hidden" name="startedAt" id="startedAt">
       <label>Name <input name="name" required autocomplete="name"></label>
       <label>Email <input name="email" type="email" required autocomplete="email"></label>
