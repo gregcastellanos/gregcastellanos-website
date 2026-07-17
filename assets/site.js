@@ -101,19 +101,24 @@ if (form) {
           submit.textContent = "Sending";
         }
         note.textContent = "Sending your inquiry...";
+        const payload = Object.fromEntries(data.entries());
         const response = await fetch(endpoint, {
           method: "POST",
-          body: data,
-          headers: { Accept: "application/json" },
+          body: JSON.stringify(payload),
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
         });
-        if (!response.ok) throw new Error("Form submission failed");
+        let result = {};
+        try {
+          result = await response.json();
+        } catch {}
+        if (!response.ok || result.success === false) throw new Error(result.message || "Form submission failed");
         form.reset();
         if (startedAt) startedAt.value = String(Date.now());
         note.textContent = "Thanks. Your inquiry has been sent.";
         window.gregAnalytics.track("contact_submit", { area: data.get("area") });
         return;
       } catch {
-        note.textContent = "The form could not send. Please email Greg directly for now.";
+        note.textContent = "The form could not send. Please email Greg directly at gregcastellanoswork@gmail.com.";
       } finally {
         if (submit) {
           submit.disabled = false;

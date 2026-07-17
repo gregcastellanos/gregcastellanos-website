@@ -4,21 +4,20 @@ Static GitHub Pages site for gregcastellanos.com.
 
 ## Contact form
 
-The contact form is ready for Formspree. Set one value — the form's endpoint —
-in `contact.html`:
+The contact form uses Web3Forms and posts directly from the static GitHub Pages
+site to:
 
 ```html
-<form class="contact-form" id="contact-form" method="post"
-      action="" data-endpoint="https://formspree.io/f/XXXXXXXX" novalidate>
+https://api.web3forms.com/submit
 ```
 
-Put the endpoint in `data-endpoint` (and mirror it in `assets/site-data.json`
-`formspreeEndpoint` for tooling). While it is empty, the form keeps the honeypot,
-timing check, and client-side validation, and falls back to a mailto draft.
+The public Web3Forms access key is included in `contact.html`, as intended for
+client-side Web3Forms integrations. Delivery is associated with:
+`gregcastellanoswork@gmail.com`.
 
-After setting the endpoint, test: successful submission, error state, spam trap,
-keyboard flow, mobile layout, the confirmation message, and delivery to
-gregcastellanoswork@gmail.com.
+Before launch, test: successful submission, error state, spam trap, keyboard
+flow, mobile layout, the confirmation message, and delivery to
+`gregcastellanoswork@gmail.com`.
 
 ## Notes
 

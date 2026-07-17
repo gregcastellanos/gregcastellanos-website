@@ -4,7 +4,8 @@
   "contactEmail": "gregcastellanoswork@gmail.com",
   "linkedIn": "https://www.linkedin.com/in/gregcastellanos",
   "coachingUrl": "https://castellanoscoaching.com",
-  "formspreeEndpoint": "",
+  "formProvider": "Web3Forms",
+  "web3FormsEndpoint": "https://api.web3forms.com/submit",
   "proofLinks": {
     "localMakerMart": "https://www.joecontent.net/vibrant-local-maker-mart-activates-empty-corner-of-columbus-green/"
   },

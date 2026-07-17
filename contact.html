@@ -68,8 +68,10 @@
     </aside>
   </section>
   <section class="contact-layout">
-    <!-- Formspree: set data-endpoint to your endpoint (e.g. https://formspree.io/f/xxxxxxxx) to enable real submissions. While empty, the form falls back to a mailto draft. -->
-    <form class="contact-form" id="contact-form" method="post" action="" data-endpoint="" novalidate>
+    <form class="contact-form" id="contact-form" method="post" action="https://api.web3forms.com/submit" data-endpoint="https://api.web3forms.com/submit" novalidate>
+      <input type="hidden" name="access_key" value="92ce1bad-d343-4955-8845-6fcda3f4a9b6">
+      <input type="hidden" name="subject" value="New gregcastellanos.com inquiry">
+      <input type="hidden" name="from_name" value="gregcastellanos.com">
       <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <input type="hidden" name="startedAt" id="startedAt">
       <label>Name <input name="name" required autocomplete="name"></label>
