@@ -75,19 +75,13 @@ body::before {
   inset: 0;
   z-index: -2;
   overflow: hidden;
-  /* Static poster shows whenever the video is absent (mobile, reduced-motion, no JS). */
-  background: #0b2238 center / cover no-repeat url("images/og-image.jpg");
+  background:
+    linear-gradient(145deg, rgba(11,34,56,.98), rgba(37,70,78,.9) 42%, rgba(246,234,218,.84) 100%),
+    linear-gradient(180deg, rgba(11,34,56,.88), rgba(11,34,56,.2) 55%, rgba(11,34,56,.82));
 }
 .site-backdrop video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .52;
-  filter: saturate(.9) contrast(1.05);
+  display: none;
 }
-/* No moving layer for reduced-motion or small screens; the poster background remains. */
-@media (prefers-reduced-motion: reduce) { .site-backdrop video { display: none; } }
-@media (max-width: 767px) { .site-backdrop video { display: none; } }
 /* Anchored sections clear the fixed header on direct load and in-page jumps. */
 :target { scroll-margin-top: clamp(6.5rem, 9vw, 8.75rem); }
 .directory-row[id], .area-panel[id], #selected-projects, #speaking { scroll-margin-top: clamp(6.5rem, 9vw, 8.75rem); }
