@@ -75,7 +75,8 @@ body::before {
   inset: 0;
   z-index: -2;
   overflow: hidden;
-  background: #0b2238;
+  /* Static poster shows whenever the video is absent (mobile, reduced-motion, no JS). */
+  background: #0b2238 center / cover no-repeat url("images/og-image.jpg");
 }
 .site-backdrop video {
   width: 100%;
@@ -84,6 +85,12 @@ body::before {
   opacity: .52;
   filter: saturate(.9) contrast(1.05);
 }
+/* No moving layer for reduced-motion or small screens; the poster background remains. */
+@media (prefers-reduced-motion: reduce) { .site-backdrop video { display: none; } }
+@media (max-width: 767px) { .site-backdrop video { display: none; } }
+/* Anchored sections clear the fixed header on direct load and in-page jumps. */
+:target { scroll-margin-top: clamp(6.5rem, 9vw, 8.75rem); }
+.directory-row[id], .area-panel[id], #selected-projects, #speaking { scroll-margin-top: clamp(6.5rem, 9vw, 8.75rem); }
 body.nav-open { overflow: hidden; }
 img, svg { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
@@ -367,18 +374,29 @@ p { margin: 0; }
 .button.primary:hover { background: var(--navy-2); color: var(--primary-text); }
 .area-rail {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: .5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .6rem;
   margin-top: 2.4rem;
 }
 .area-rail a {
+  display: block;
   border-top: 3px solid var(--area);
-  padding: .75rem .2rem 0;
+  padding: .7rem .4rem .75rem;
+  min-height: 3.4rem;
   text-decoration: none;
   min-width: 0;
+  border-radius: 0 0 5px 5px;
+  transition: transform var(--duration) ease, background var(--duration) ease;
 }
+.area-rail a:hover, .area-rail a:focus-visible { transform: translateY(-2px); background: color-mix(in srgb, var(--area) 12%, transparent); }
+.area-rail a:hover span, .area-rail a:focus-visible span { color: var(--gold-strong); }
 .area-rail span { display: block; color: var(--navy); font-weight: 800; }
 .area-rail small { color: var(--muted); line-height: 1.25; display: block; }
+/* Selected-work production photo — proof, sized modestly and light on mobile. */
+.project-media { margin: 1.1rem 0 0; max-width: 20rem; }
+.project-media picture { display: block; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+.project-media img { display: block; width: 100%; height: auto; }
+.project-media figcaption { margin-top: .5rem; color: var(--muted); font-size: .82rem; }
 .hero-image, .page-hero img {
   position: relative;
   margin: 0;
@@ -831,7 +849,7 @@ textarea { resize: vertical; }
   .hero-image { min-height: clamp(18rem, 54vw, 32rem); }
   .editorial-work-list { grid-template-columns: 1fr; }
   .contact-invite.compact h2 { font-size: 2.35rem; }
-  .area-rail, .ecosystem-grid, .focus-list, .topic-grid, .footer-grid, .format-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ecosystem-grid, .focus-list, .topic-grid, .footer-grid, .format-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .venture-row, .directory-row { grid-template-columns: 1fr; gap: .75rem; }
   .work-item { grid-template-columns: 3rem minmax(0, 1fr); }
   .work-item aside, .contact-aside { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 1rem; }
@@ -856,7 +874,8 @@ textarea { resize: vertical; }
   .page-hero h1 { font-size: clamp(2.25rem, 10vw, 2.9rem); max-width: 13ch; }
   .text-hero h1, .indexed-hero h1 { max-width: 14ch; }
   .lede { font-size: 1.08rem; max-width: 100%; }
-  .area-rail, .ecosystem-grid, .focus-list, .topic-grid, .footer-grid, .format-list { grid-template-columns: 1fr; }
+  .ecosystem-grid, .focus-list, .topic-grid, .footer-grid, .format-list { grid-template-columns: 1fr; }
+  .area-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .filter-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .filter-label { grid-column: 1 / -1; }
   .filter { text-align: left; }
@@ -897,3 +916,5 @@ textarea { resize: vertical; }
     transition-duration: .001ms !important;
   }
 }
+.form-privacy { margin-top: .5rem; color: var(--muted); font-size: .85rem; }
+.form-privacy a { color: var(--navy); font-weight: 700; text-underline-offset: .18em; }

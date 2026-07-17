@@ -137,3 +137,9 @@ if (form) {
     window.gregAnalytics.track("contact_prepare", { area: data.get("area") });
   });
 }
+// Background video: never animate for reduced-motion visitors (poster remains via CSS).
+const bgVideo = document.querySelector(".site-backdrop video");
+if (bgVideo && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  bgVideo.pause();
+  bgVideo.removeAttribute("autoplay");
+}
