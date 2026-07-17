@@ -1,16 +1,17 @@
 const themeToggle = document.querySelector(".theme-toggle");
 const applyTheme = (theme) => {
   document.documentElement.dataset.theme = theme;
-  if (themeToggle) {
+if (themeToggle) {
     const dark = theme === "dark";
     themeToggle.setAttribute("aria-pressed", String(dark));
     themeToggle.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
-    themeToggle.textContent = dark ? "Light" : "Dark";
+    const label = themeToggle.querySelector(".theme-label");
+    if (label) label.textContent = dark ? "Light" : "Dark";
   }
 };
 try {
   const stored = localStorage.getItem("greg-theme");
-  const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   applyTheme(stored || (systemDark ? "dark" : "light"));
 } catch {
   applyTheme(document.documentElement.dataset.theme || "light");
@@ -75,10 +76,11 @@ if (form) {
     const select = form.querySelector('select[name="area"]');
     if (select && [...select.options].some((option) => option.value === area || option.textContent === area)) select.value = area;
   }
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const data = new FormData(form);
     const note = document.querySelector("#form-note");
+    const submit = form.querySelector('button[type="submit"]');
     const elapsed = Date.now() - Number(data.get("startedAt") || 0);
     if (data.get("website") || elapsed < 2500) {
       note.textContent = "Thanks. Please try again in a moment.";
@@ -87,7 +89,38 @@ if (form) {
     const required = ["name", "email", "area", "message"];
     const missing = required.filter((key) => !String(data.get(key) || "").trim());
     if (missing.length) {
-      note.textContent = "Please complete the required fields before preparing the inquiry.";
+      note.textContent = "Please complete the required fields before sending the inquiry.";
+      return;
+    }
+    const endpoint = form.dataset.endpoint || form.getAttribute("action") || "";
+    if (endpoint) {
+      try {
+        if (submit) {
+          submit.disabled = true;
+          submit.setAttribute("aria-busy", "true");
+          submit.textContent = "Sending";
+        }
+        note.textContent = "Sending your inquiry...";
+        const response = await fetch(endpoint, {
+          method: "POST",
+          body: data,
+          headers: { Accept: "application/json" },
+        });
+        if (!response.ok) throw new Error("Form submission failed");
+        form.reset();
+        if (startedAt) startedAt.value = String(Date.now());
+        note.textContent = "Thanks. Your inquiry has been sent.";
+        window.gregAnalytics.track("contact_submit", { area: data.get("area") });
+        return;
+      } catch {
+        note.textContent = "The form could not send. Please email Greg directly for now.";
+      } finally {
+        if (submit) {
+          submit.disabled = false;
+          submit.removeAttribute("aria-busy");
+          submit.textContent = "Send inquiry";
+        }
+      }
       return;
     }
     const subject = encodeURIComponent("Gregory Castellanos inquiry: " + data.get("area"));
@@ -96,10 +129,11 @@ if (form) {
       "Email: " + data.get("email"),
       "Organization: " + (data.get("organization") || ""),
       "Area: " + data.get("area"),
+      "Timing: " + (data.get("timing") || ""),
       "",
       String(data.get("message") || "")
     ].join("\n"));
-    note.innerHTML = 'Your inquiry is ready: <a href="mailto:gregcastellanoswork@gmail.com?subject=' + subject + '&body=' + body + '">open email draft</a>.';
+    note.innerHTML = 'Email draft ready: <a href="mailto:gregcastellanoswork@gmail.com?subject=' + subject + '&body=' + body + '">open email draft</a>.';
     window.gregAnalytics.track("contact_prepare", { area: data.get("area") });
   });
 }

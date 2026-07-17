@@ -1,16 +1,9 @@
 # Gregory Castellanos Website
 
-Static website for gregcastellanos.com.
+Static GitHub Pages site for gregcastellanos.com.
 
-The site is organized around six connected areas:
+## Contact form
 
-- People
-- Ideas
-- Brands
-- Technology
-- Experiences
-- Places
+The contact form is prepared for Formspree. Configure the single value `site.formspreeEndpoint` in `work/site-builder/build-site.mjs` with the real Formspree endpoint, then rebuild and test a real submission.
 
-The generated site lives at the repository root for simple static hosting through GitHub Pages or any conventional static host.
-
-See `DESIGN_AUDIT.md` for design notes and recommended next assets.
+Until that value is set, the public form keeps the honeypot and timing check and offers a mailto fallback.

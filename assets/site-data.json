@@ -2,6 +2,25 @@
   "baseUrl": "https://gregcastellanos.com",
   "name": "Gregory Castellanos",
   "contactEmail": "gregcastellanoswork@gmail.com",
+  "linkedIn": "https://www.linkedin.com/in/gregcastellanos",
+  "coachingUrl": "https://castellanoscoaching.com",
+  "formspreeEndpoint": "",
+  "proofLinks": {
+    "localMakerMart": "https://www.joecontent.net/vibrant-local-maker-mart-activates-empty-corner-of-columbus-green/"
+  },
+  "patents": [
+    [
+      "D739,846",
+      "Portable sound system",
+      "https://patents.google.com/patent/USD739846S/en"
+    ],
+    [
+      "D815,617",
+      "Portable yoga block speaker",
+      "https://patents.google.com/patent/USD815617S/en"
+    ]
+  ],
+  "recommendation": "Mukta Sambrani, a former education colleague, recommends Greg for his technical expertise, creative energy, event management, art and technology education, and multimedia work.",
   "description": "The umbrella site for Gregory Castellanos, a Northern California founder, learning designer, executive function coach, AI evaluation specialist, event producer, and inventor.",
   "nav": [
     [
@@ -28,7 +47,7 @@
       "venture": "Castellanos Coaching",
       "url": "https://castellanoscoaching.com",
       "purpose": "Executive function, practical independence, education, and support for neurodivergent teens, adults, and families.",
-      "intro": "Executive function, practical independence, education, and support for neurodivergent teens, adults, and families.",
+      "intro": "Executive-function coaching since 2020 for Autistic and ADHD clients, including Regional Center and Self-Determination Program participants.",
       "cue": "Clarity in motion",
       "color": "#315d82"
     },
@@ -55,7 +74,7 @@
       "name": "Technology",
       "venture": "AI You Trust",
       "purpose": "Human-centered AI, digital tools, creative technology, education, and responsible adoption.",
-      "intro": "Human-centered AI, digital tools, creative technology, education, and responsible adoption.",
+      "intro": "AI literacy, rubric-based evaluation, creative technology, and responsible adoption.",
       "cue": "Tools people can trust",
       "color": "#233f63"
     },
@@ -87,6 +106,19 @@
   ],
   "work": [
     {
+      "name": "Castellanos Coaching",
+      "areas": [
+        "People"
+      ],
+      "overview": "Executive-function coaching for Autistic and ADHD clients, including Regional Center and Self-Determination Program participants.",
+      "situation": "Neurodivergent teens and adults often need person-centered systems that connect goals, daily life, and real readiness.",
+      "role": "Founder and executive-function coach, 2020-present",
+      "contribution": "Served 30+ clients cumulatively since 2020, building person-centered plans and individualized progress tracking around college, employment, and independent-living readiness.",
+      "status": "Active practice.",
+      "privacy": "Private client details withheld",
+      "link": "https://castellanoscoaching.com"
+    },
+    {
       "name": "Local Maker Mart",
       "areas": [
         "People",
@@ -96,10 +128,10 @@
         "Experiences",
         "Places"
       ],
-      "overview": "A nonprofit community arts center and maker hub in North Beach, San Francisco.",
+      "overview": "A nonprofit arts and maker hub in North Beach, San Francisco, built to connect participation, commerce, learning, and community in one physical place.",
       "situation": "Creative local projects need systems that make participation, commerce, learning, and community feel connected.",
-      "role": "Founder and organizer",
-      "contribution": "Led facility acquisition, nonprofit setup, grants, partnerships, programming, volunteers, and maker education.",
+      "role": "Founder, CEO, and program director, 2019-2022",
+      "contribution": "Owned facility acquisition, nonprofit governance, grant writing, partnerships, youth STEAM programming, and community-facing events that engaged hundreds of artists and makers.",
       "status": "Legacy venture and reference point for current community-building work.",
       "privacy": "Public concept"
     },
@@ -110,12 +142,66 @@
         "Technology",
         "Experiences"
       ],
-      "overview": "Patented sustainable audio technology and a production practice rooted in sound, design, and live operations.",
+      "overview": "An original sound, product-invention, and event-production venture connecting audio design, product development, entrepreneurship, branding, technical production, and gatherings.",
       "situation": "Events need more than gear. They need calm, preparation, good taste, and technical systems that support the human experience.",
-      "role": "Founder, producer, technical director",
-      "contribution": "Developed resonance-based speaker technology, earned two U.S. patents, and connected product design with event production.",
+      "role": "Founder, inventor, producer, and technical director, 2013-2020",
+      "contribution": "The work produced two U.S. design patents: a portable sound system and a portable yoga block speaker.",
       "status": "Legacy venture informing Recreation Experiences.",
       "privacy": "Public venture"
+    },
+    {
+      "name": "TechShop STEAM and Maker Education",
+      "areas": [
+        "People",
+        "Ideas",
+        "Technology"
+      ],
+      "overview": "Hands-on STEAM curriculum and project-based learning built around fabrication, technology, design, creativity, and practical problem solving.",
+      "situation": "Hands-on learning works best when tools, teaching, confidence, and real projects are brought into one understandable sequence.",
+      "role": "Curriculum designer, educator, and program developer, 2014-2019",
+      "contribution": "Taught hundreds of learners, designed project-based sequences across 2D/3D design, laser cutting, CNC, 3D printing, and electronics, and co-designed TechShop Inside, a mobile makerspace for underserved communities.",
+      "status": "Selected education and curriculum work.",
+      "privacy": "Publicly described at a high level"
+    },
+    {
+      "name": "Enterprise Event Production",
+      "areas": [
+        "Technology",
+        "Experiences"
+      ],
+      "overview": "More than fifteen years of work across live sound, video, playback, show calling, technical direction, and complex event operations.",
+      "situation": "Complex events need calm technical judgment, clear communication, and production systems that support the room.",
+      "role": "Technical director, audio and video professional, show caller, producer, and production partner",
+      "contribution": "Supported productions for Google, Stripe, Atlassian, GitHub, Nasdaq, SF MoMA, and the World Economic Forum through these production companies; manages 200+ slide decks per show and live cue-to-cue workflows.",
+      "status": "Selected production experience, described without implying direct client relationships.",
+      "privacy": "Client and production-company details withheld"
+    },
+    {
+      "name": "Shangri-La Sonoma",
+      "areas": [
+        "Ideas",
+        "Technology",
+        "Experiences",
+        "Places"
+      ],
+      "overview": "A Sonoma retreat center where Greg has supported event production, web design, guest-experience thinking, and place-readiness.",
+      "situation": "A property is a set of experiences: where people gather, what they hear, what they see after dark, and what everyone has gotten used to overlooking.",
+      "role": "Creative, technical, and experiential contributor",
+      "contribution": "Produced events including Ghost Town Gala 2025 and contributed to hospitality, production, presentation, and guest-experience systems.",
+      "status": "Selected property work, with ownership and operations details intentionally not implied.",
+      "privacy": "Private ownership and operational details withheld"
+    },
+    {
+      "name": "Convergence 2026",
+      "areas": [
+        "Experiences"
+      ],
+      "overview": "A sold-out 250-person, 15-artist production shaped through budget, stage management, and run-of-show leadership.",
+      "situation": "Multi-artist productions need a clear container, calm operations, and a run-of-show that lets the room move well.",
+      "role": "Executive producer",
+      "contribution": "Owned budget, stage management, and run-of-show for a sold-out 250-person production with 15 artists.",
+      "status": "Selected recent production work.",
+      "privacy": "Public details only"
     },
     {
       "name": "Stay In The Light",
@@ -148,8 +234,8 @@
     }
   ],
   "current": [
-    "AI evaluation, AI literacy, and human-centered tool design.",
-    "Executive function coaching and practical independence systems.",
+    "AI literacy and structured evaluation for schools, teams, and creative projects.",
+    "Executive function coaching and practical independence systems through Castellanos Coaching.",
     "Events, learning programs, and Make Places Better projects that help places come alive."
   ],
   "timeline": [
