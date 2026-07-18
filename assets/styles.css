@@ -771,7 +771,7 @@ textarea { resize: vertical; }
 }
 .site-footer {
   display: grid;
-  grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
   padding: clamp(2rem, 5vw, 4rem) var(--gutter);
   background: var(--footer-bg);
@@ -787,8 +787,8 @@ textarea { resize: vertical; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem 1rem;
 }
 .footer-grid h2 { color: white; font: 800 .78rem var(--sans); letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
 .footer-grid a { display: block; color: #d9e8ee; text-decoration: none; margin: .35rem 0; }
