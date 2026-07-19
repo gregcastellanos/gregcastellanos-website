@@ -73,8 +73,18 @@ if (form) {
   const params = new URLSearchParams(window.location.search);
   const area = params.get("area");
   if (area) {
+    const areaMap = {
+      People: "Coaching and Human Support",
+      Ideas: "Consulting and Project Development",
+      Brands: "Creative Strategy and Branding",
+      Technology: "AI Evaluation, Literacy, and Technology",
+      Experiences: "AV and Event Production",
+      Places: "Place-Based Projects",
+      "Speaking and Teaching": "Speaking and Workshops",
+    };
+    const requestedArea = areaMap[area] || area;
     const select = form.querySelector('select[name="area"]');
-    if (select && [...select.options].some((option) => option.value === area || option.textContent === area)) select.value = area;
+    if (select && [...select.options].some((option) => option.value === requestedArea || option.textContent === requestedArea)) select.value = requestedArea;
   }
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
